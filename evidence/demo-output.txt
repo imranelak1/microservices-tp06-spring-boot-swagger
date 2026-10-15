@@ -1,0 +1,19 @@
+APPLICATION RÉELLE : student-management sur http://localhost:18006
+POST /students/save [application/json] -> HTTP 201
+{"id":13,"nom":"LACHGAR","prenom":"Mohamed","dateNaissance":"1985-09-01"}
+POST /students/save [application/json] -> HTTP 201
+{"id":14,"nom":"ALI","prenom":"Mohamed","dateNaissance":"1985-05-02"}
+POST /students/save [application/json] -> HTTP 201
+{"id":15,"nom":"AMAL","prenom":"Mohamed","dateNaissance":"1990-06-01"}
+GET /students/all [application/json] -> HTTP 200
+[{"id":13,"nom":"LACHGAR","prenom":"Mohamed","dateNaissance":"1985-09-01"},{"id":14,"nom":"ALI","prenom":"Mohamed","dateNaissance":"1985-05-02"},{"id":15,"nom":"AMAL","prenom":"Mohamed","dateNaissance":"1990-06-01"}]
+GET /students/count [application/json] -> HTTP 200
+3
+GET /students/byYear [application/json] -> HTTP 200
+[[1985,2],[1990,1]]
+GET /v3/api-docs -> HTTP 200, les cinq routes sont documentées
+GET /swagger-ui/index.html -> HTTP 200, interface Swagger réelle
+DELETE /students/delete/13 [application/json] -> HTTP 204
+DELETE /students/delete/14 [application/json] -> HTTP 204
+DELETE /students/delete/15 [application/json] -> HTTP 204
+VÉRIFICATIONS HTTP RÉUSSIES
